@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Alieena",
+        "department": "Engineering",
+        "address": "123 Main St, Cityville",
+        "phone": "5551234123"
+        
+    },
+    {
+        "name": "Alexa",
+        "department": "Marketing",
+        "address": "456 Oak St, Townsville",
+        "phone": "5551234123"
+    },
+    {
+        "name": "Mani Johnson",
+        "department": "HR",
+        "address": "789 Pine St, Villagetown",
+        "phone": "5551234123"
+    },
+    {
+      "name": "Tokiyo",
+      "department": "Engineering",
+      "address": "123 Main St, Cityville",
+      "phone": "5551234123"
+  },
+  {
+      "name": "Tom Smith",
+      "department": "Marketing",
+      "address": "456 Oak St, Townsville",
+      "phone": "5551234123"
+  },
+  {
+      "name": "Hong Johnson",
+      "department": "HR",
+      "address": "789 Pine St, Villagetown",
+      "phone": "5551234123"
+  },
+  {
+      "name": "Tynixo",
+      "department": "Engineering",
+      "address": "123 Main St, Cityville",
+      "phone": "5551234123"
+  },
+  {
+      "name": "Jane dio",
+      "department": "Marketing",
+      "address": "456 Oak St, Townsville",
+      "phone": "5551234123"
+  },
+  {
+      "name": "Bob Johnson",
+      "department": "HR",
+      "address": "789 Pine St, Villagetown",
+      "phone": "5551234123"
+  }, 
+  {
+    "name": "Jane Smith",
+    "department": "Marketing",
+    "address": "456 Oak St, Townsville",
+    "phone": "5551234123"
+}
+  ]

@@ -1,0 +1,31 @@
+.sidebar {
+    height: 100%;
+    width: 35px;
+    margin-top: 65px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background-color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    padding: 15px;
+    background-color: white;
+   
+  }
+   
+  #toogle{
+    border: none;
+    height: 40px;
+    margin-left: -5px;
+    background-color: white;
+  }
+  svg{
+    margin-top: 15px;
+   
+  }
+  .hmm{
+    margin-left: 150px;
+  }
+   

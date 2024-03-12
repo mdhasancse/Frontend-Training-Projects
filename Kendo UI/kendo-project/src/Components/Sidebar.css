@@ -1,0 +1,132 @@
+html{
+  background: #ffffff;
+}
+body {
+  background: #ffffff;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+}
+ 
+.main-container{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(253, 253, 253) !important;
+    justify-content: space-between;
+}
+.left-nav{
+  background-color: #84cef1;
+  /* height: 670px; */
+  height: 100vh;
+  /* margin-top: -2px; */
+  padding-top: 18px;
+  width: 80px;
+  background-color: #052836;
+  color:white;
+}
+.App{
+  display: flex;
+  width: 99%;
+}
+.table-part{
+  padding: 15px;
+}
+ 
+.addForm{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  align-items: center;
+  background-color: #84cef1;
+  background-color: #052836;
+  color: wheat;
+  margin-left: 350px;
+}
+
+.empbtn{
+  margin-bottom: 5px !important;
+  background-color: rgb(119, 105, 243) !important;
+  color: white !important;
+  margin-left: 1300px !important;
+  margin: 20px;
+ 
+}
+.savbtn{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ 
+.k-grid-header th {
+  background-color: rgb(178, 197, 221);
+  background-color: rgb(37, 37, 97) !important;
+  color: white !important;
+}
+.k-appbar .k-appbar-section {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: 25px;
+}
+ 
+.k-appbar-light {
+  background-color: rgb(37, 37, 97) !important;
+  color: white !important;
+}
+.top-nav {
+  font-size: 14px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+}
+ 
+li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+tr:nth-child(even) {
+  background-color: #dddddd !important;
+}
+li:hover {
+  color: #84cef1;
+}
+.k-grid-content {
+  overflow-y: hidden !important;
+}
+ 
+.title {
+  font-size: 18px;
+  margin: 0;
+}
+ 
+ 
+.delete{
+  background-color: rgb(253, 85, 85) !important;
+  color: white !important;
+}
+.edit{
+  background-color: rgb(96, 85, 253) !important;
+  color: white !important;
+}
+.view{
+  background-color: rgb(71, 181, 255) !important;
+  color: white !important;
+  margin: 0px 3px 0px 3px !important;
+}
+
+li{
+  list-style:  none !important;
+  
+}
+.nameinput{
+  margin-top: 15px;
+}
+.editForm{
+  display: table-caption !important;
+  /* width: 200px;   */
+  align-items: center;
+  margin-left: 350px;
+}

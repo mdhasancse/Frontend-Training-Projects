@@ -1,0 +1,28 @@
+[
+    {
+      "SubscriptionName": "SaasTest1",
+      "OfferName": "preview",
+      "Plan": "plan1",
+      "Quality": "N/A",
+      "Email": "hasan912849@gmail.com",
+      "status": "subscribed"
+    },
+    {
+      "SubscriptionName": "SaasTest2",
+      "OfferName": "preview",
+      "Plan": "plan2",
+      "Quality": "N/A",
+      "Email": "hasan912849@gmail.com",
+      "status": "subscribed"
+    },
+    {
+      "SubscriptionName": "SaasTest3",
+      "OfferName": "preview",
+      "Plan": "plan3",
+      "Quality": "N/A",
+      "Email": "hasan912849@gmail.com",
+      "status": "subscribed"
+    }
+   
+  ]
+  

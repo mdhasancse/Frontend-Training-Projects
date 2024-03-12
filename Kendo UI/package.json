@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@progress/kendo-react-layout": "^7.1.0",
+    "@progress/kendo-theme-default": "^7.2.0",
+    "@progress/kendo-theme-material": "^7.2.0"
+  }
+}

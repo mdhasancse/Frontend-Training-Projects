@@ -1,0 +1,36 @@
+
+[
+  {
+    "id": 1,
+    "name": "Product A",
+    "price": 29.99,
+    "discount": 0.1,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/gw/pcmso/Mouse1x._SY116_CB581434399_.png"
+  },
+  
+  {
+    "id": 2,
+    "name": "Product B",
+    "price": 39.99,
+    "discount": 0,
+    "description": "Nulla euismod mi libero, ac venenatis neque faucibus vel.",
+    "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/gw/pcmso/KB1x._SY116_CB581434399_.png"
+  },
+  {
+    "id": 3,
+    "name": "Product C",
+    "price": 49.99,
+    "discount": 0.2,
+    "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/gw/pcmso/BAG1x._SY116_CB581434399_.png"
+  },
+  {
+    "id": 4,
+    "name": "Product D",
+    "price": 59.99,
+    "discount": 0.3,
+    "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/gw/pcmso/HP1x._SY116_CB581434399_.png"
+  }
+]

@@ -1,0 +1,34 @@
+/* TopNav.css */
+
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    height: 60px;
+    margin-top: 2px;
+  }
+  
+  .Logo img {
+    height: 50px;
+    font-weight: bold;
+  }
+  
+  .UserDropdown {
+    display: flex;
+    align-items: center;
+  }
+  
+  .UserDropdownButton {
+    margin-left: 10px;
+  }
+  #search{
+    margin: 15px;
+  }
+
+  .logo{
+
+  }
+  

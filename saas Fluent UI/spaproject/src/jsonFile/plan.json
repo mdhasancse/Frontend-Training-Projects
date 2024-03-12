@@ -1,0 +1,18 @@
+[
+    {
+        "offerID": "123456",
+        "offer_validity": "2024-12-31"
+    },
+    {
+        "offerID": "789012",
+        "offer_validity": "2025-06-30"
+    },
+    {
+        "offerID": "345678",
+        "offer_validity": "2024-08-31"
+    },
+    {
+        "offerID": "841436",
+        "offer_validity": "2024-08-31"
+    }
+]
