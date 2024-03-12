@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Add language inside list </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+    <ul class="language">
+        <li >Javascript</li>
+    </ul>
+
+
+    
+</body>
+<script>
+    function addLanguage(langName){
+       const li = document.createElement('li');
+       li.innerHTML = `${langName}`;
+       document.querySelector('.language').appendChild(li);
+    }
+
+    addLanguage("Python");
+    addLanguage("Java");
+    
+
+
+    // Optimize approach  <We do not need to traverse all list then append at the last, we can directly add items to last 
+    function addOptimizeLanguage(langName) {
+        const li = document.createElement('li');
+        // const addText = document.createTextNode(langName); space bachao hahaha
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptimizeLanguage("golang");
+    addOptimizeLanguage("C#");
+
+    //EDIT
+    const secondlang = document.querySelector('li:nth-child(2)');
+    //secondlang.innerHTML = "Edited lang";
+
+    //optimeze approach
+    const newli = document.createElement('li');
+    newli.textContent = "edited lang ";
+    secondlang.replaceWith(newli);
+
+    //Or
+    const firstlang = document.querySelector('li:first-child');
+    firstlang.outerHTML = '<li>Typescript</l1>';
+
+
+    // Remove
+    const lastlang = document.querySelector('li:last-child');
+    lastlang.remove();
+</script>
+</html>

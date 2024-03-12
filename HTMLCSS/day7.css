@@ -1,0 +1,19 @@
+
+.first-card{
+    background-color: red;
+    border: 30px solid white;
+    height: 100px;
+    width: 200px;
+}
+.second-card{
+    background-color: green;
+    border: 30px solid white;
+    height: 100px;
+    width: 200px;
+}
+.third-card{
+    background-color: blue;
+    border: 30px solid white;
+    height: 100px;
+    width: 200px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CRUD Operation</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3><b>Please fill this form.</b></h3>
+        <hr>
+
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" pattern="[A-Za-z ]+" title="Name should contain only letters and spaces" oninput="validateName()" required>
+            <div id="nameError" style="color: red;"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" pattern=".*@xencia\.com" title="Email should have the domain @xencia.com" oninput="validateEmail()" required>
+            <div id="emailError" style="color: red;"></div>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" pattern="[0-9]{12}" title="Please enter 12 digits" placeholder="12 digits" oninput="validatePhone()" required>
+            <div id="phoneError" style="color: red;"></div>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <button type="button" class="btn" onclick="addUser()">Add User</button>
+        </form>
+        <h4>User Details</h4>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- User data will be dynamically added here -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <script>
+        function validateName() {
+            const nameInput = document.getElementById("name");
+            const nameError = document.getElementById("nameError");
+            nameInput.value = nameInput.value.replace(/[^A-Za-z ]/g, '');
+            if (nameInput.value.length === 0) {
+                // nameError.textContent = "Please enter at least one alphabetic character.";
+            } else {
+                nameError.textContent = "";
+            }
+        }
+
+        function validateEmail() {
+            const emailInput = document.getElementById("email");
+            const emailError = document.getElementById("emailError");
+            if (!emailInput.checkValidity()) {
+                // emailError.textContent = "Email should have the domain @xencia.com.";
+            } else {
+                emailError.textContent = "";
+            }
+        }
+
+        function validatePhone() {
+            const phoneInput = document.getElementById("phone");
+            const phoneError = document.getElementById("phoneError");
+            phoneInput.value = phoneInput.value.replace(/\D/g, '');
+            if (phoneInput.value.length !== 12) {
+                // phoneError.textContent = "Please enter exactly 12 digits.";
+            } else {
+                phoneError.textContent = "";
+            }
+        }
+
+        let serialNumber = 1;
+
+        function addUser() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const address = document.getElementById("address").value;
+
+            if (address.length >= 100) {
+                alert("Address must be less than or equal to 100 characters");
+                return;
+            }
+
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td data-serial="${serialNumber}">${serialNumber}</td>
+                <td>${name}</td>
+                <td>${email}</td>
+                <td>${phone}</td>
+                <td>${address}</td>
+                <td>
+                    <button onclick="editUser(this)">Edit</button>
+                    <button onclick="deleteUser(this)">Delete</button>
+                </td>
+            `;
+
+            document.getElementById("userTableBody").appendChild(newRow);
+            serialNumber++;
+            document.getElementById("userForm").reset();
+        }
+
+        function editUser(button) {
+            const row = button.parentNode.parentNode;
+            const cells = row.getElementsByTagName("td");
+
+            document.getElementById("name").value = cells[1].innerText;
+            document.getElementById("email").value = cells[2].innerText;
+            document.getElementById("phone").value = cells[3].innerText;
+            document.getElementById("address").value = cells[4].innerText;
+
+            // You can make the row editable by adding an "editing" class
+            row.classList.add("editing");
+        }
+
+        function deleteUser(button) {
+            const row = button.parentNode.parentNode;
+            row.remove();
+        }
+    </script>
+
+</body>
+
+</html>

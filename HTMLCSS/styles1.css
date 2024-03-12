@@ -1,0 +1,42 @@
+
+h3{
+    border-style: inset;
+    background-color: lightblue;
+}
+img{
+    float: right;
+    width: 150PX;
+    height: 170PX;
+    margin-right: 100px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+a:link {
+    color: green;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
+  .new-link
+  {
+    padding: 15px;
+    background-color:darkseagreen;
+    
+    text-align: center;
+    border-radius: 4px;
+    font-size: large;
+
+  }
+ 

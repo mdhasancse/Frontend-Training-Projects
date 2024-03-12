@@ -1,0 +1,18 @@
+.first-card{
+    background-color: red;
+ 
+}
+.second-card{
+    background-color: green;
+ 
+}
+.third-card{
+    background-color: blue;
+    
+}
+.box{
+    border: 30px solid white;
+    height: 100px;
+    width: 200px;
+    display: inline-block;
+}

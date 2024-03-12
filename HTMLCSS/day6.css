@@ -1,0 +1,42 @@
+
+.big-containe
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+   
+}
+.left-contsiner{
+    border: 2px solid black;
+    width: 500px;
+    padding: 10px;
+}
+img{
+    float: left;
+    width: 259px;
+    height: 200px;
+    padding: 10px;
+    background-color: rgb(221, 207, 189);
+}
+.right-container{
+    border: 2px solid black;
+    width: 500px;
+    padding: 10px;
+    float: right;
+}
+.right-img{
+    float: left;
+    width: 259px;
+    height: 200px;
+    padding: 10px;
+    background-color: rgb(221, 207, 189);
+}
+.footer{
+position: fixed;
+   left: 0;
+   bottom: 10px;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}

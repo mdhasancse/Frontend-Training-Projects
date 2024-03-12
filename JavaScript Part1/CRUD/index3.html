@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>
+            JavaScript CRUD Example Tutorial
+        </title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+</head>
+<body>
+
+    <div class="employee-form">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div>
+                <label for="fullName">Full Name*</label>
+                <input class="validation-error hide" type="text" id="fullName" pattern="[A-Za-z ]+"
+                    title="Name should contain only letters and spaces" oninput="validateName()" required>
+                <label class="validation-error hide" id="fullNameValidationError">This field is required and should
+                    contain only letters and spaces.</label>
+            </div>
+
+            <div>
+                <label for="email">Email Id</label>
+                <input type="email" name="email" id="email" pattern=".*@xencia\.com"
+                    title="Email should have the domain @xencia.com" oninput="validateEmail()" required>
+                <span id="emailError"></span>
+            </div>
+
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{12}" title="Please enter 12 digits"
+                    placeholder="12 digits" oninput="validatePhone()" required>
+                <span id="phoneError"></span>
+            </div>
+
+            <div>
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address">
+            </div>
+
+            <div class="form-action-buttons">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <br />
+    <div class="employees-table">
+        <table class="list" id="userDetails">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+                function validateName() {
+                    const nameInput = document.getElementById("fullName");
+                    const nameValidationError = document.getElementById("fullNameValidationError");
+
+                    // Remove non-alphabetic characters from the input
+                    nameInput.value = nameInput.value.replace(/[^A-Za-z ]/g, '');
+
+                    // Check if the name is not empty after removing non-alphabetic characters
+                    if (nameInput.value.trim() === "") {
+                        nameValidationError.textContent = "Please enter at least one alphabetic character.";
+                    } else {
+                        nameValidationError.textContent = "";
+                    }
+                }
+
+
+                function validateEmail() {
+                    const emailInput = document.getElementById("email");
+                    const emailError = document.getElementById("emailError");
+                    if (!emailInput.checkValidity()) {
+                        // emailError.textContent = "Email should have the domain @xencia.com.";
+                    } else {
+                        emailError.textContent = "";
+                    }
+                }
+
+
+
+                function validatePhone() {
+                    const phoneInput = document.getElementById("phone");
+                    const phoneError = document.getElementById("phoneError");
+                    phoneInput.value = phoneInput.value.replace(/\D/g, '');
+                    if (phoneInput.value.length !== 12) {
+                        // phoneError.textContent = "Please enter exactly 12 digits.";
+                    } else {
+                        phoneError.textContent = "";
+                    }
+                }
+
+                var selectedRow = null
+
+                function onFormSubmit() {
+                    if (validate()) {
+                        var formData = readFormData();
+                        if (selectedRow == null)
+                            insertNewRecord(formData);
+                        else
+                            updateRecord(formData);
+                        resetForm();
+                    }
+                }
+
+                function readFormData() {
+                    var formData = {};
+                    formData["fullName"] = document.getElementById("fullName").value;
+                    formData["email"] = document.getElementById("email").value;
+                    formData["phone"] = document.getElementById("phone").value;
+                    formData["address"] = document.getElementById("address").value;
+                    return formData;
+                }
+
+                function insertNewRecord(data) {
+                    var table = document.getElementById("userDetails").getElementsByTagName('tbody')[0];
+                    var newRow = table.insertRow(table.length);
+                    cell1 = newRow.insertCell(0);
+                    cell1.innerHTML = data.fullName;
+                    cell2 = newRow.insertCell(1);
+                    cell2.innerHTML = data.email;
+                    cell3 = newRow.insertCell(2);
+                    cell3.innerHTML = data.phone;
+                    cell4 = newRow.insertCell(3);
+                    cell4.innerHTML = data.address;
+                    cell4 = newRow.insertCell(4);
+                    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+                }
+
+                function resetForm() {
+                    document.getElementById("fullName").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("address").value = "";
+                    selectedRow = null;
+                }
+
+                function onEdit(td) {
+                    selectedRow = td.parentElement.parentElement;
+                    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
+                    document.getElementById("email").value = selectedRow.cells[1].innerHTML;
+                    document.getElementById("phone").value = selectedRow.cells[2].innerHTML;
+                    document.getElementById("address").value = selectedRow.cells[3].innerHTML;
+                }
+                function updateRecord(formData) {
+                    selectedRow.cells[0].innerHTML = formData.fullName;
+                    selectedRow.cells[1].innerHTML = formData.email;
+                    selectedRow.cells[2].innerHTML = formData.phone;
+                    selectedRow.cells[3].innerHTML = formData.address;
+                }
+
+                function onDelete(td) {
+                    if (confirm('Are you sure to delete this record ?')) {
+                        row = td.parentElement.parentElement;
+                        document.getElementById("userDetails").deleteRow(row.rowIndex);
+                        resetForm();
+                    }
+                }
+                function validate() {
+                    isValid = true;
+                    if (document.getElementById("fullName").value == "") {
+                        isValid = false;
+                        document.getElementById("fullNameValidationError").classList.remove("hide");
+                    } else {
+                        isValid = true;
+                        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+                            document.getElementById("fullNameValidationError").classList.add("hide");
+                    }
+                    return isValid;
+                }
+    </script>
+</body>
+
+</html>

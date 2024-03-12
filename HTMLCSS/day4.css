@@ -1,0 +1,35 @@
+.container {
+    /* display: inline; */
+    background-color: rgb(184, 164, 164);
+    padding: 10px;
+}
+
+.div1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 19%;
+    margin-right: 19%;
+}
+
+img {
+    width: 26.66%;
+    height: 210px;
+    border: 3px solid black;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.div2 {
+    display: flex;
+    justify-content: center;
+    margin-left: 12%;
+    margin-right: 12%;
+
+}
+
+.div3 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 19%;
+    margin-right: 19%;
+}

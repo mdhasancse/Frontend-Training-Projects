@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        background-color: #c4d7da;
+        padding: 10px;
+        margin: 50px;
+        
+    }
+
+    .container>div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 50px ;
+        font-size: 30px;
+        
+
+    }
+
+    .home {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .item{
+    margin-top: 50px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="home">
+            <p><i class=" item fa-solid fa-house "></i></p>
+        </div>
+        <div class="person">
+            <p><i class="fa-solid fa-user"></i></p>
+        </div>
+        <div class="book">
+            <p><i class="fa-solid fa-book"></i></p>
+        </div>
+    </div>
+</body>
+
+</html>

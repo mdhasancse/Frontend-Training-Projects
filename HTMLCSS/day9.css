@@ -1,0 +1,94 @@
+.main-container{
+    margin-left: 450px;
+    margin-top: 50px;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #FF9933, #fff, #138808);
+    color: #000;
+    font-size: 36px;
+    position: relative;
+  }
+.first-card{
+    background-color: #ff9933;
+    height: 100px;
+    width: 50%;
+}
+.second-card{
+    background-color: white;
+    height: 100px;
+    width: 50%;
+}
+.third-card{
+    background-color: green;
+    height: 100px;
+    width: 50%;
+}
+.wheel {
+	height: 95px;
+	width: 95px;
+	border: 3px solid darkblue;
+	border-radius: 50px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.wheel .line {
+	height: 100%;
+	width: 1px;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	background: darkblue;
+}
+
+.line:nth-child(1) {
+	transform: rotate(15deg)
+}
+
+.line:nth-child(2) {
+	transform: rotate(30deg)
+}
+
+.line:nth-child(3) {
+	transform: rotate(45deg)
+}
+
+.line:nth-child(4) {
+	transform: rotate(60deg)
+}
+
+.line:nth-child(5) {
+	transform: rotate(75deg)
+}
+
+.line:nth-child(6) {
+	transform: rotate(90deg)
+}
+
+.line:nth-child(7) {
+	transform: rotate(105deg)
+}
+
+.line:nth-child(8) {
+	transform: rotate(120deg)
+}
+
+.line:nth-child(9) {
+	transform: rotate(135deg)
+}
+
+.line:nth-child(10) {
+	transform: rotate(150deg)
+}
+
+.line:nth-child(11) {
+	transform: rotate(165deg)
+}
+
+.line:nth-child(12) {
+	transform: rotate(180deg)
+}
+
+
