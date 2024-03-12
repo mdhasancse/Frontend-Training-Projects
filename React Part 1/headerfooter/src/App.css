@@ -1,0 +1,22 @@
+.header{
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(122, 115, 163);
+  color: white;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}

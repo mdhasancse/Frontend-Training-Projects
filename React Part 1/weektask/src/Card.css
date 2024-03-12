@@ -1,0 +1,30 @@
+.body
+{
+    background-color: #EFF2F5;
+    height: 100vh;
+}
+.row{
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #EFF2F5; */
+
+}
+.custom-row-margin {
+    margin-left: 200px;
+    /* margin-right: 200px; */
+    /* margin-bottom: -54px;
+    margin-top: -45px; */
+  }
+  
+.crd{
+  width: 385px !important;
+    margin-right: 20px;
+}
+.bg-color{
+  margin-left: 140px;
+  background-color: #EFF2F5;
+}
+.pagenaviBody{
+  background-color: #EFF2F5;
+  position: relative;
+}
