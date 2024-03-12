@@ -1,0 +1,233 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(178, 166, 245);
+ 
+ 
+}
+
+
+.header {
+  background-color: rgb(37, 37, 97);
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  max-width: 140px;
+  height: auto;
+  margin-left: 40px;
+}
+.heading-tag{
+margin-left: 50px;
+}
+
+button {
+  background-color: #00C2E7;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 10px;
+
+}
+.btn{
+  margin-top: 50px; 
+  width: 15%;
+  margin-bottom: 30px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /* box-shadow: 5px 10px 18px #888888;
+  background-image: linear-gradient(to right,violet,rgb(190, 223, 236)); */
+  
+
+}
+@media (min-width:768px){
+  .container{
+    width: 900px !important;
+  }
+}
+@media (min-width: 768px){
+.col-sm-2 {
+    width: 13.66666667%;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+p{
+  
+  margin-left: 28px;
+}
+}    
+.container h3{
+  text-align: center;
+  border: 1px sold wheat;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(37, 37, 97);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=number], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #f1f1f1;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+hr {
+  border: 1px solid #b3b1b1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #FF00C7;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  width: 95%;
+  opacity: 0.9;
+  
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+/* ------------------------------------------  Table ----------------------------------- */
+
+#userDetails h2{
+   width: 900px;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: rgb(37, 37, 97);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+}
+table {
+    width: 900px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* color: white; */
+    background-color: rgb(178, 166, 245);
+    color: black;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+  background-color: rgb(37, 37, 97);
+  color: white;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+ 
+}
+
+
+.bn632-hover {
+  width: 110px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 40px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn26 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 5px 0 rgba(65, 132, 234, 0.75);
+}

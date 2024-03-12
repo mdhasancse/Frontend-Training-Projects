@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D5DDDF;
+}
+
+.bg-container {
+    background-color: #FFFFFF;
+    margin: 0px 100px 0px 100px;
+    
+}
+
+.nav {
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    padding-top: 30px;
+    margin: 0PX 100PX 0PX 100PX;
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px sold wheat;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(37, 37, 97);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topnav a:hover {}
+
+.topnav a.active {}
+
+.icons {
+    float: left;
+    color: rgb(37, 37, 97);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.bi-search{
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    border: 1px sold wheat;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(37, 37, 97);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border: 1px solid #b3b1b1;
+    /* margin-bottom: 25px; */
+    margin: 0PX 110PX 0PX 110PX;
+}
+
+/* ----------slide nav bar -------- */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1350px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 600px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 400px 1px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    /* color: rgb(37, 37, 97); */
+    font-size: x-large;
+
+}
+.lap{
+    color: white;
+}
+
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* ----------slide nav bar -------- */
+
+
+
+
+/* ---------------Images content ----------- */
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    /* margin: 20px; */
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 50px;
+
+}
+
+.image-row p {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(37, 37, 97);
+    padding-bottom: 20px;
+}
+
+img {
+    width: 350px;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-img {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#content {
+    margin: 20px;
+    display: none;
+    /* overflow: hidden; */
+    margin-left: 220px;
+    margin-right: 140px;
+    margin-top: 100px;
+    padding-bottom: 280px;
+}
+
+#content h2 {
+    font-size: 24px;
+    padding-top: 40px;
+    border: 1px sold wheat;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(37, 37, 97);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 10px;
+    border: 1px sold wheat;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(37, 37, 97);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content img {
+    float: left;
+    margin-right: 50px;
+    width: 300px;
+    height: auto;
+    margin-left: -130px;
+}
+
+.head {
+    display: flex;
+}
