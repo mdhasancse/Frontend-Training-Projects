@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age = prompt("Enter your age");
+        console.log("you entered: "+age);
+        age = parseFloat(age);
+        
+
+        function lifeInWeeks(age)
+        {
+            var totalWeek = (90-age)*52;
+            return totalWeek;
+        }
+        function lifeInDays(age)
+        {
+            var totaldays = (90-age)*365;
+            return totaldays
+        }
+        function lifeInMonths(age){
+            var totalMonths = (90-age)*12;
+            return totalMonths;
+        }
+        alert("You have " +lifeInDays(age) +" days, "+lifeInWeeks(age)+" weeks, and "+lifeInMonths(age)+" months left.");
+    </script>
+</body>
+</html>

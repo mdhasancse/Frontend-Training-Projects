@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        var weight = parseFloat(prompt("Enter weight in kilograms:"));
+        var height = parseFloat(prompt("Enter height in meters:"));
+
+        function bmiCalculator(weight, height) {
+            var bmi = weight / (height * height);
+            return bmi;
+        }
+
+        if (!isNaN(weight) && !isNaN(height) && height !== 0) {
+            alert("The Body Mass Index (BMI) is: " + bmiCalculator(weight, height));
+        } else {
+            alert("Invalid input. Please enter valid numbers for weight and height.");
+        }
+    </script>
+</body>
+</html>

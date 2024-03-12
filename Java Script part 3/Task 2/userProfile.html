@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userProfile.css">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <div class="big-container">
+        <div class="header">
+            <img src="xencia.png" alt="img">
+            <div class="dropdown">
+                <!-- <button class="dropbtn">Dropdown</button> -->
+                
+                <img src="profile-img.png" alt="img">
+                <div class="dropdown-content">
+                <a href="#">Admin</a>
+                <a href="#">Setting</a>
+                <a href="#">Log out</a>
+                <a href=""><button  class="bn632-hover bn26"  style="width:auto;">Login</button></a>
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <!-- <img src="img2.png" alt="image"> -->
+        </div>
+    </div>
+
+    <h1>User Profile</h1>
+    <a href="Index.html"><button>render</button></a>
+    <script>
+        // Retrieve the user's name from the URL query parameter
+        const params = new URLSearchParams(window.location.search);
+        const userName = params.get('name');
+
+        // Display the user's name
+        document.body.innerHTML += `<p>User Name: ${userName}</p>`;
+    </script>
+</body>
+
+</html>

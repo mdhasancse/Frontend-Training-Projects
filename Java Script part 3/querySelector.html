@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="center">Example for changing href attribute value after clicking the button</h3>
+    <div id="myDiv">
+       <a href="https://www.tutorix.com">Welcome to Tutorix Site</a>
+       <br><br>
+       <button onclick="sampleFunction()">
+          click here
+       </button>
+    </div>
+    <script>
+       function sampleFunction() {
+        document.getElementById('center').innerHTML="Hello vipul bhai You are osm teacher";
+          var url = document.querySelector("a, ");
+          url.href = 'https://www.google.com';
+          url.textContent = "Hello, Welcome to Tutorialspoint";
+       }
+    </script>
+ </body>
+</html>

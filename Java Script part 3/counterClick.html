@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="count">0</div>
+    <button class="btn-add">Update counter</button>
+  
+
+    <script>
+        const count = document.querySelector('.count');
+        const addBtn = document.querySelector('.btn-add');
+
+        addBtn.addEventListener('click', handleClick(), false);
+
+        function handleClick(add = 0) {
+            return function () {
+                count.textContent = ++add;
+
+            }
+           
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>  Refresh this page to generate and download a new text file </h1>
+    <!-- <button onclick="generateAndDownloadFile()">Download File</button> -->
+    
+    <script>
+        function generateAndDownloadFile() {
+            var fileContent = "This is a different content for the file.";
+            var fileName = "new_download.txt";
+    
+            var blob = new Blob([fileContent], {
+                type: "text/plain",
+            });
+    
+            saveAs(blob, fileName);
+        }generateAndDownloadFile();
+    </script>
+    
+</body>
+
+</html>

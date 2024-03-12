@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fNumber = prompt("Enter first number:");
+        console.log("You entered: " + fNumber);
+
+
+        var sNumber = prompt("Enter second number:");
+        console.log("You entered: " + sNumber);
+
+
+        fNumber = parseFloat(fNumber);
+        sNumber = parseFloat(sNumber);
+
+
+        if (!isNaN(fNumber) && !isNaN(sNumber)) {
+            var operation = prompt("Enter the operation (addition, substraction, Multiplication, Division, mod):");
+            switch (operation) {
+                case 'addition':
+                    result = fNumber + sNumber;
+                    break;
+                case 'substraction':
+                    result = fNumber - sNumber;
+                    break;
+                case 'Multiplication':
+                    result = fNumber * sNumber;
+                    break;
+                case 'Division':
+                    if (sNumber !== 0) {
+                        result = fNumber / sNumber;
+                    } 
+                    else 
+                    {
+                        alert("Error: Division by zero is not allowed.");
+                        result = "Undefined";
+                    }
+                    break;
+                    
+                case 'mod':
+                    if (sNumber !== 0) {
+                        result = fNumber % sNumber;
+                    } 
+                    else 
+                    {
+                        alert("Error: Modulus by zero is not allowed.");
+                        result = "Undefined";
+                    }
+                    break;
+                default:
+                    alert("Invalid operation. Please enter  (addition, substraction, Multiplication, Division, mod.)");
+                    result = "Invalid operation";
+            }
+            alert("Result of " + fNumber + " " + operation + " " + sNumber + " is: " + result);
+        } else {
+            alert("Invalid input. Please enter valid numbers.");
+        }
+
+    </script>
+</body>
+
+</html>

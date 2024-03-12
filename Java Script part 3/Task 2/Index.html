@@ -1,0 +1,168 @@
+<!-- main.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CRUD Operation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3><b>Please fill this form.</b></h3>
+        <hr>
+
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" pattern="[A-Za-z ]+" title="Name should contain only letters and spaces" required>
+<!-- 
+            <label for="email">Email:</label>
+            <input type="email" id="email" pattern=".*@xencia\.com" title="Email should have the domain @xencia.com" oninput="validateEmail()" required> -->
+ 
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" pattern="[A-Za-z ]+" title="Branch should contain only letters and spaces" required> 
+
+            <label for="phone">Phone:</label>
+            <!-- Accepts only 12 digits -->
+            <input type="tel" id="phone" pattern="\d{12}" placeholder="10 digits" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <button type="button" class="btn" onclick="addUser()">Add User</button>
+        </form>
+        <h4>User Details</h4>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- User data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let serialNumber = 1;
+
+        // Load existing user details from localStorage on page load
+        window.onload = function () {
+            loadUserDetails();
+        };
+
+        function loadUserDetails() {
+            const storedUsers = JSON.parse(localStorage.getItem('userDetails')) || [];
+            for (const user of storedUsers) {
+                addUserToTable(user);
+            }
+        }
+
+        function addUser() {
+            // Get form values
+            const name = document.getElementById("name").value;
+            const branch = document.getElementById("branch").value;
+            const phone = document.getElementById("phone").value;
+            const address = document.getElementById("address").value;
+
+           
+            if (!phone.match(/[0-9]{10}/)) {
+                alert("Phone number must be 12 digits");
+                return;
+            }
+
+            if (address.length >= 100) {
+                alert("Address must be less than or equal to 100 characters");
+                return;
+            }
+
+            // Create user object
+            const user = {
+                serialNumber,
+                name,
+                branch,
+                phone,
+                address
+            };
+
+            // Add user to table and save to localStorage
+            addUserToTable(user);
+            saveUserDetails();
+
+            // Increment serial number for the next entry
+            serialNumber++;
+
+            // Clear form fields
+            document.getElementById("userForm").reset();
+        }
+
+        function addUserToTable(user) {
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td>${user.serialNumber}</td>
+                <td><a href="userProfile.html?name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.branch)}&phone=${encodeURIComponent(user.phone)}&address=${encodeURIComponent(user.address)}">${user.name}</a></td>
+                <td>${user.branch}</td>
+                <td>${user.phone}</td>
+                <td>${user.address}</td>
+                <td>
+                    <button onclick="editUser(this)">Edit</button>
+                    <button onclick="deleteUser(this)">Delete</button>
+                </td>
+            `;
+
+            document.getElementById("userTableBody").appendChild(newRow);
+        }
+
+        function editUser(button) {
+            const row = button.parentNode.parentNode;
+            const cells = row.getElementsByTagName("td");
+
+            // Populate form with selected row data
+            document.getElementById("name").value = cells[1].innerText;
+            document.getElementById("branch").value = cells[2].innerText;
+            document.getElementById("phone").value = cells[3].innerText;
+            document.getElementById("address").value = cells[4].innerText;
+
+            // Remove the edited row from the table
+            row.remove();
+            saveUserDetails();
+        }
+
+        function deleteUser(button) {
+            const row = button.parentNode.parentNode;
+            row.remove();
+            saveUserDetails();
+        }
+
+        function saveUserDetails() {
+            const userDetails = [];
+            const rows = document.getElementById("userTableBody").getElementsByTagName("tr");
+
+            for (const row of rows) {
+                const cells = row.getElementsByTagName("td");
+                const user = {
+                    serialNumber: cells[0].innerText,
+                    name: cells[1].innerText,
+                    branch: cells[2].innerText,
+                    phone: cells[3].innerText,
+                    address: cells[4].innerText
+                };
+                userDetails.push(user);
+            }
+
+            // Save to localStorage
+            localStorage.setItem('userDetails', JSON.stringify(userDetails));
+        }
+    </script>
+
+</body>
+
+</html>
