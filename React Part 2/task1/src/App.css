@@ -1,0 +1,29 @@
+.App{
+  text-align: center;
+}
+.Card{
+  border: 1px solid black;
+  width: auto;
+  align-items: center;
+  border-radius: 50%;
+  background-color: azure;
+  /* width: 300px; */
+  
+}
+.top{
+  display: flex;
+  margin-left: 500px;
+  justify-content: space-around;
+
+}
+.circle-img{
+  width: 75px;
+  height: 70px;
+  border-radius: 25%;
+  margin-right: 500px;
+  
+}
+.heading{
+  border-radius: 40%;
+  background-color: gold;
+}

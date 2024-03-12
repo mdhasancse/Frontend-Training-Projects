@@ -1,0 +1,94 @@
+body{
+  background-color: aliceblue;
+  margin: 0px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+
+.h1style{
+  text-align: center;
+  padding: 14px;
+  background-color: rgb(223, 146, 247);
+  border-radius: 15px;
+  width: 500px;
+  align-items: center;
+}
+.btn {
+  text-align: center;
+  padding: 15px;
+  background-color: blueviolet;
+  width: 500px;
+  margin-left: -800px;
+  color: white;
+}
+.container{
+  /* margin-left: 500px; */
+}
+.cancelbtn{
+  padding: 5px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.formInput{
+  align-items: center;
+  text-align: center;
+  padding: 100px;
+  background-color: crimson;
+  width: 486px;
+  color: white;
+}
+input{
+  margin: 15px;
+}
+.showDetails{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: brown;
+  color: white;
+  width: 480px;
+}
+.btn1{
+  width: 200px;
+  margin-left: 20px;
+}
+.btn2{
+  width: 200px;
+  margin-left: -10px;
+}
+.container{
+  text-align: center;
+  
+}
+.bg-con{
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+.form-control {
+  width: 750px;
+  /* float: left; */
+}
