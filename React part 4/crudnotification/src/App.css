@@ -1,0 +1,77 @@
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: #faf9f6; */
+  background-color: #FFFFFF;
+  background-color: rgb(178, 166, 245);
+  /* position: relative; */
+}
+
+.btn {
+  margin-top: 1rem;
+  border: none;
+  background-color: #1d4ed8;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px #ccc;
+}
+.notification-container {
+  position: absolute;
+  cursor: pointer;
+  top:-38px;
+  right: 55px;
+  
+  
+}
+
+.notifications {
+  position: absolute;
+  top:560px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: -525px !important;
+  float: left;
+  width: 200px;
+  margin-right: -55px;
+}
+
+.notification-item {
+  margin-bottom: 5px;
+ 
+}
+.belliccon{
+  position: absolute ;
+  top:0px;
+  right: 2px;
+  /* margin-top: -400px !important; */
+}
+.bell-icon{
+  /* margin-top: -525px !important;
+  float: right;
+  margin-left: 1450px; */
+
+  
+  
+}
+.notify-cont{
+  display: flex;
+  justify-content: space-between;
+}
+.close-btn{
+  color: red !important;
+  float: right;
+  margin-top: -25px !important;
+}
+/* .time{
+  float: right;
+} */
