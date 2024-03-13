@@ -1,0 +1,113 @@
+.header {
+  /* background-color: #f1f1f1; */
+  background-color: rgb(224, 231, 245);
+  padding: 8px;
+  text-align: center;
+}
+
+.bg-container {
+  height: 90vh;
+  background-size: cover;
+}
+
+.mainContainer {
+  display: flex;
+  height: 87vh;
+}
+
+.table-container {
+  background-color: rgb(178, 166, 245);
+  text-align: center;
+  padding: 8px;
+  width: 100vW;
+
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 200px;
+  background-color: rgb(37, 37, 97);
+  overflow-x: hidden;
+
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+a:hover {
+  /* background-color: rgb(167, 191, 238); */
+  background-color:#acaaaa;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 85%;
+  margin-left: 8%;
+}
+
+h2 {
+  padding: 30px;
+  text-decoration: underline;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+th {
+  background-color: rgb(37, 37, 97);
+  color: white;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* h2 {
+  text-decoration: underline;
+} */
+
+.div1 {
+  /* border:1px solid orange */
+}
+
+.div2 {
+  /* margin-top: 50px; */
+  /* background-color: rgb(178, 166, 245); */
+  /* border: 1px solid red; */
+  /* width: 100vW; */
+
+}
+
+.div3 {
+  /* border:1px solid blue */
+}

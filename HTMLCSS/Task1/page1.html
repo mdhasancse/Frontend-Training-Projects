@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Header with Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="header">
+            <img src="C:\Users\HasanMd\Desktop\JAVASCRIPT\Task1\xencia.png" alt="Company Logo">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        </div>
+
+        <div id="id01" class="modal">
+            <form class="modal-content animate" onsubmit="validateForm(event)">
+
+                <div class="container1">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                </div>
+                <h3 class="heading-tag">Login Please</h3>
+                <div class="container">
+                    <label class="control-label col-sm-2 lble" for="email"><b>Email</b></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Enter email" name="email" id="email">
+                    </div>
+
+                    <label class="control-label col-sm-2 lble" for="password"><b>Password</b></label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" placeholder="Enter password" name="password"
+                            id="pwd">
+                    </div>
+
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success btn-default btn">Login</button>
+                        <a href="register.html"><button type="button" class="btn btn-default btn">Register</button></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+
+            function validateForm(event) {
+                event.preventDefault();
+                var enteredEmail = document.getElementById('email').value;
+                var enteredPwd = document.getElementById('pwd').value;
+
+                if (enteredEmail === 'admin' && enteredPwd === 'admin@12') {
+                    window.location.href = 'login.html';
+                    return true
+                } else {
+                    alert('Please give valid email and password');
+                    return false;
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
